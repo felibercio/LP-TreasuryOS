@@ -54,12 +54,20 @@ function Navbar() {
     <nav className="fixed top-0 z-50 w-full border-b border-white/5 bg-black/10 backdrop-blur-md">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
         <div className="flex items-center">
-          <img 
-            src="/logo.png" 
-            alt="TreasuryOS Logo" 
-            className="h-12 md:h-16 w-auto object-contain transition-transform duration-300 hover:scale-105" 
-            style={{ filter: "drop-shadow(0 0 10px rgba(255,255,255,0.1))" }}
-          />
+          <a href="#" aria-label="TreasuryOS" className="group flex items-baseline gap-0 leading-none select-none">
+            <span
+              className="text-xl tracking-widest font-light text-white/70 transition-colors duration-300 group-hover:text-white/90"
+              style={{ fontFamily: "'Inter', 'Manrope', 'Public Sans', system-ui, sans-serif", letterSpacing: '0.12em' }}
+            >
+              Treasury
+            </span>
+            <span
+              className="text-xl font-bold text-white transition-colors duration-300 group-hover:text-white"
+              style={{ fontFamily: "'Inter', 'Manrope', 'Public Sans', system-ui, sans-serif", letterSpacing: '0.04em' }}
+            >
+              OS
+            </span>
+          </a>
         </div>
         
         <div className="hidden md:flex items-center space-x-1 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 p-1 absolute left-1/2 -translate-x-1/2">
@@ -191,7 +199,7 @@ function HeroSection() {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full max-w-md sm:max-w-none"
         >
-          <Button size="lg" className="h-14 bg-white text-black hover:bg-gray-100 rounded-full px-8 text-base font-semibold group flex items-center justify-center gap-2 shadow-2xl shadow-white/25 transition-all outline-none">
+          <Button size="lg" className="h-14 bg-white text-black hover:bg-gray-100 rounded-full px-8 text-base font-semibold group flex items-center justify-center gap-2 shadow-[0_0_32px_4px_rgba(255,255,255,0.18),0_4px_24px_rgba(0,0,0,0.4)] hover:shadow-[0_0_48px_8px_rgba(255,255,255,0.28),0_4px_24px_rgba(0,0,0,0.5)] transition-all outline-none ring-1 ring-white/30 hover:ring-white/60">
             <span>{t.hero.connectWallet}</span>
             <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
           </Button>
@@ -1252,11 +1260,20 @@ function Footer() {
     <footer className="w-full border-t border-white/5 bg-black py-12 relative z-20">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 md:flex-row">
         <div className="flex items-center">
-          <img 
-            src="/logo.png" 
-            alt="TreasuryOS Logo" 
-            className="h-10 md:h-12 w-auto object-contain opacity-80 transition-opacity hover:opacity-100" 
-          />
+          <a href="#" aria-label="TreasuryOS" className="flex items-baseline gap-0 leading-none select-none opacity-70 hover:opacity-100 transition-opacity duration-300">
+            <span
+              className="text-base tracking-widest font-light text-white"
+              style={{ fontFamily: "'Inter', 'Manrope', 'Public Sans', system-ui, sans-serif", letterSpacing: '0.12em' }}
+            >
+              Treasury
+            </span>
+            <span
+              className="text-base font-bold text-white"
+              style={{ fontFamily: "'Inter', 'Manrope', 'Public Sans', system-ui, sans-serif", letterSpacing: '0.04em' }}
+            >
+              OS
+            </span>
+          </a>
         </div>
         
         <div className="text-sm text-gray-500">
